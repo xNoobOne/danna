@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutoriales - Maquíllate con Dana</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    /* Body y tipografía */
+    body {
+      background-color: #ffe6ea;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar rosa */
+    .navbar-custom {
+      background-color: #ff99c8;
+      padding: 1rem 0;
+    }
+    .navbar-custom .navbar-brand {
+      color: white;
+      font-size: 1.75rem;
+      text-decoration: none;
+    }
+    .navbar-custom .nav-link {
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #ffd1e8;
+    }
+
+    /* Títulos de sección */
+    h2.section-title {
+      color: #d91e81;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    p.section-subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Cards de tutoriales */
+    .tutoriales-section .card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: white;
+    }
+    .tutoriales-section .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .tutoriales-section .card img {
+      object-fit: cover;
+      height: 180px;
+      width: 100%;
+    }
+    .tutoriales-section .card-body {
+      text-align: center;
+    }
+    .tutoriales-section .btn-video {
+      background-color: #ff6699;
+      border: none;
+      color: white;
+      margin-top: 10px;
+    }
+    .tutoriales-section .btn-video:hover {
+      background-color: #ff4d88;
+    }
+
+    /* Botón volver al inicio */
+    .btn-primary-custom {
+      background-color: #ff6699;
+      border: none;
+      color: white;
+    }
+    .btn-primary-custom:hover {
+      background-color: #ff4d88;
+    }
+
+    /* Responsive cards dentro del carrusel */
+    @media (max-width: 768px) {
+      .carousel-inner .col-md-4 { flex: 0 0 100%; max-width: 100%; margin-bottom: 1rem; }
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+      .carousel-inner .col-md-4 { flex: 0 0 48%; max-width: 48%; margin-bottom: 1rem; }
+    }
+    @media (min-width: 993px) {
+      .carousel-inner .col-md-4 { flex: 0 0 31%; max-width: 31%; margin-bottom: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-custom">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="../index.html">💄 Maquíllate con Dana</a>
+      <div>
+        <span class="text-white me-3" id="nombreUsuarioNavbar">Invitado</span>
+        <a class="nav-link d-inline" href="../html/login.html" id="btnIniciarSesion">Iniciar Sesión</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Tutoriales -->
+  <section class="tutoriales-section py-5">
+    <div class="container">
+      <h2 class="section-title">🎥 Tutoriales Rápidos</h2>
+      <p class="section-subtitle">Aprende rápido con nuestros tutoriales en video</p>
+
+      <!-- Carrusel -->
+      <div id="tutorialesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carousel-inner">
+          <!-- Slides se llenan desde tutoriales.js -->
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#tutorialesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#tutorialesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <!-- Botón volver al inicio -->
+      <div class="text-center mt-4">
+        <a href="../index.html" class="btn btn-primary-custom btn-lg">🏠 Volver al Inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script de tutoriales -->
+  <script type="module" src="../js/tutoriales.js"></script>
+</body>
+</html>

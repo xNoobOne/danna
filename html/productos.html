@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Maquillaje con Dana</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    .navbar-custom {
+      background-color: #ff99c8;
+      padding: 1rem 0;
+    }
+    .navbar-custom .navbar-brand { color: white; font-size: 1.75rem; text-decoration: none; }
+    .navbar-custom .nav-link { color: white; font-size: 1rem; text-decoration: none; }
+    .navbar-custom .nav-link:hover { color: #ffd1e8; }
+
+    body { font-family: Arial, sans-serif; background-color: #ffe6ea; margin: 0; padding: 0; }
+
+    .section-title { color: #d91e81; text-align: center; margin-top: 60px; margin-bottom: 20px; }
+    .section-subtitle { text-align: center; color: #555; margin-bottom: 40px; }
+
+    .product-card { border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+    .product-card img { border-top-left-radius: 15px; border-top-right-radius: 15px; }
+    .product-card .card-body { display: flex; flex-direction: column; }
+    .product-card .card-title { color: #d91e81; font-weight: bold; margin-bottom: 10px; }
+    .product-card .btn-buy { background-color: #ff6699; color: white; border: none; margin-top: auto; }
+    .product-card .btn-buy:hover { background-color: #ff4d88; }
+
+    .products-section { padding: 0 15px 60px; }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-custom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand">💄 Maquíllate con Dana</a>
+    <div id="navbarOpciones">
+      <!-- Navbar dinámico -->
+      <span class="me-3 text-white" id="nombreUsuarioNavbar">Invitado</span>
+      <a class="nav-link d-inline" href="../html/login.html" id="btnIniciarSesion">Iniciar Sesión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class="products-section">
+    <h2 class="section-title">Set de Brochas 🖌️</h2>
+    <p class="section-subtitle">Explora nuestras mejores brochas de maquillaje</p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <div class="col">
+        <div class="card product-card h-100">
+          <img src="../ímagenes/img8.jpg" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kit básico rosa</h5>
+            <p class="card-text">COP $87.000</p>
+            <button class="btn btn-buy btnComprar" data-nombre="Kit básico rosa" data-precio="87000" data-imagen="../ímagenes/img8.jpg">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card product-card h-100">
+          <img src="../ímagenes/img9.jpg" class="card-img-top">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Brochas profesionales set</h5>
+            <p class="card-text">COP $120.000</p>
+            <button class="btn btn-buy btnComprar" data-nombre="Brochas profesionales set" data-precio="120000" data-imagen="../ímagenes/img9.jpg">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script de productos -->
+<script type="module" src="../js/productos.js"></script>
+
+</body>
+</html>

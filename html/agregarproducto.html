@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agregar Producto - Maquillaje con Dana</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body { background-color: #ffe6ea; font-family: Arial, sans-serif; margin:0; padding:0; }
+    .navbar-custom { background-color: #ff99c8; padding: 1rem 0; }
+    .navbar-custom .navbar-brand { color: white; font-size: 1.75rem; text-decoration: none; }
+    .navbar-custom .nav-link { color: white; font-size: 1rem; text-decoration: none; }
+    .navbar-custom .nav-link:hover { color: #ffd1e8; }
+
+    .container-form { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .btn-primary-custom { background-color: #ff6699; border: none; color: white; }
+    .btn-primary-custom:hover { background-color: #ff4d88; }
+    h2 { color: #d91e81; text-align: center; margin-bottom: 20px; }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-custom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand">💄 Maquíllate con Dana</a>
+    <div id="navbarOpciones">
+      <span class="me-3 text-white" id="nombreUsuarioNavbar">Invitado</span>
+      <a class="nav-link text-white" href="#" id="cerrarSesion">Cerrar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-form">
+  <h2>Agregar Producto</h2>
+  <form id="formAgregarProducto">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre del Producto</label>
+      <input type="text" class="form-control" id="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio</label>
+      <input type="number" class="form-control" id="precio" required>
+    </div>
+    <div class="mb-3">
+      <label for="imagen" class="form-label">URL de la Imagen</label>
+      <input type="text" class="form-control" id="imagen" required>
+    </div>
+    <button type="submit" class="btn btn-primary-custom w-100">Agregar Producto</button>
+  </form>
+  <p id="mensaje" class="text-center mt-3"></p>
+</div>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+<script type="module" src="../js/aggproducto.js"></script>
+
+</body>
+</html>
